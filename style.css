@@ -1,0 +1,128 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins:wght@500&family=Roboto&family=Sigmar&display=swap');
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+}
+
+.box
+{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.box::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent,purple, purple);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent,aqua, aqua);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+h1
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Carter One', cursive;
+    margin-top: 200px;
+    font-size: 25px;
+    margin-bottom: 75px;
+}
+
+.img-1
+{
+    margin-bottom: -50%;
+    margin-left: 80px;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+}
+
+.btn
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content:center;
+    display:inline;
+    background: white;
+    border: solid transparent;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    margin: 35px;
+    letter-spacing: 2px;
+}
+
+.btn:hover
+{
+    transition: 0.5s;
+    transform: scale(50px);
+    background: darkcyan;
+    box-shadow: 0 0 25px aqua;
+    color: #111;
+}
+
+
+
+
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.cmd
+{
+    position: absolute;
+    inset: 2px;
+    background: #28292d;
+    z-index: 10;
+    border-radius: 10px;
+}
